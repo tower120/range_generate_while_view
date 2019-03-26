@@ -41,7 +41,7 @@ void benchmark(){
                             return {++i};
                         })
                     //| view::take_exactly(size);
-                        | view::take_while([size](auto i){ return *i<=size;});
+                        | view::take_while([size](auto i){ return *i<size;});
 
             //auto list = view::generate_n([i = 0]() mutable -> int{ return ++i;}, size);
             for(auto i : list){
@@ -99,9 +99,6 @@ int main()
             if (i == 10) return {};
             return ++i;
         });
-
-    /*std::cout << *(++list.begin());
-    std::cout << std::endl;*/
 
     for(auto i : list){
         std::cout << i << " ";
