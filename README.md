@@ -2,10 +2,10 @@ Regular (multi-passable) generator view.
 
 ```cpp
 auto i0_10 =  view::generate_while(
-    [i = int()](auto rewind) mutable -> std::optional<int>{
+    [i = int()](auto rewind) mutable -> optional<int>{
         if constexpr (rewind) i = -1;
         if (i == 10) return {};
-        return {++i};
+        return ++i;
     });
     
 for(int i : i0_100) std::cout << i << " ";
