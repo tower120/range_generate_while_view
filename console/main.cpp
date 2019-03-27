@@ -92,7 +92,7 @@ int main()
     benchmark();
 
     return 0;
-
+/*
     auto list = view::generate_while(
         [i = int()](auto rewind) mutable -> optional<int>{
             if constexpr (rewind) i = 0;
@@ -104,5 +104,5 @@ int main()
         std::cout << i << " ";
     }
 
-    return 0;
+    return 0;*/
 }
